@@ -1,0 +1,17 @@
+GET https://www.omdbapi.com/?apikey=7a628d44&t=star%20wars HTTP/1.1
+###
+
+GET https://www.omdbapi.com/?apikey=7a628d44&s=star%20wars HTTP/1.1
+###
+
+GET https://www.omdbapi.com/?apikey=7a628d44&s=star%20wars&type=movie HTTP/1.1
+###
+
+GET https://www.omdbapi.com/?apikey=7a628d44&s=star%20wars&type=series HTTP/1.1
+###
+
+GET https://www.omdbapi.com/?apikey=7a628d44&s=star%20wars&type=game HTTP/1.1
+###
+
+GET https://www.omdbapi.com/?apikey=7a628d44&s=star%20wars&type=game&page=1 HTTP/1.1
+###
