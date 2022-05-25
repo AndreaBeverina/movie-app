@@ -1,27 +1,11 @@
-const URL_movie_list = "https://www.omdbapi.com/?apikey=7a628d44&s=star%20wars";
+import {URL_base} from "./config.js";
 
-
-/* chiama la web api e restituisce elenco di film */
-export const listMovies = () => {
-    fetch(URL_movie_list)
+export const apiList = (s,type) => {
+    const url = `${URL_base}s=${s}&type=${type}`;
+    fetch(url)
     .then(response => response.json())
     .then(results => {
-        const movies_result = results.Search;
-        console.log(movies_result);
+        const final_result = results.Search;
+        console.log(final_result);
     })
 }
-
-/* chiama la web api e restituisce SOLO le serie TV */
-
-const ricercaSerie = "&type=series";
-
-export const listSeries = () => {
-    let URL_serie_list = URL_movie_list + ricercaSerie;
-    fetch(URL_serie_list)
-    .then(response => response.json())
-    .then(results => {
-        const series_result = results.Search;
-        console.log(series_result);
-    })
-}
-
