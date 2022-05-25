@@ -8,10 +8,13 @@
 </head>
 <body>
     <script type="module">
-        import {listMovies,listSeries} from "./modules/api-modules.js";
+        import {apiList} from "./modules/api-modules.js";
+        import {content_type}from "./modules/config.js";
 
-        listMovies();
-        listSeries();
+        apiList("star%20wars","");
+        apiList("star%20wars",content_type.SERIES);
+        apiList("transformers","");
+
     </script>
 </body>
 </html>
