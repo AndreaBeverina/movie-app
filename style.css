@@ -1,0 +1,81 @@
+/* Generali */
+
+h1 {
+    text-align: center;
+    padding: 1rem;
+}
+
+#above-the-fold {
+    height: 450px;
+    border-bottom: solid black 1px;
+}
+
+.navbar-fluid {
+    border-bottom: solid black 1px;
+}
+
+#navtext {
+    border-left: solid black 1px;
+}
+
+#logo {
+    padding: 1rem 0 0 3rem;
+}
+
+
+
+/* Sezione film */
+
+#sezione-film {
+    padding-bottom: 50px;
+    border-bottom: solid black 1px;
+}
+
+#film {
+    height: 400px;
+    background-image: url('./img/placeholder.jpg'); 
+    background-size: cover;
+    background-position: center;
+}
+
+#row-1 {
+    /* background-color: grey; */
+    text-align: center;
+}
+
+#row-2 {
+    /* background-color: lightgray; */
+    text-align: center;
+}
+
+#row-3 {
+    /* background-color: grey; */
+    text-align: center;
+}
+
+
+
+/* Sezione serie tv */
+
+#serie {
+    padding: 1rem;
+}
+
+
+
+#poster{
+    height: 300px;
+    background-image: url('./img/placeholder.jpg'); 
+    background-size: cover;
+    background-position: center;
+}
+
+
+#serie-desc1{
+    padding-left: 50px;
+}
+
+#serie-desc2 {
+    text-align: right;
+    padding-right: 50px;
+}
