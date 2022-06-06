@@ -1,0 +1,389 @@
+/* Generali */
+
+h1 {
+    text-align: center;
+    padding: 1rem;
+    
+}
+
+
+body{
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:top center;
+    font-family: 'Heebo',sans-serif;
+    color: black;
+}
+
+hr{
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.sezione-style1 {
+    padding-top: 15px;
+    padding-bottom: 50px;
+    border-bottom: solid black 1px;
+}
+
+.sezione-style1 h1, h3, h4, p{
+    color: white;
+    z-index: 2;    
+}
+
+.sezione-style1 h3, h4{
+    padding: 0 10px 0 10px;
+}
+
+.sfoglia{
+    padding-top: 3rem;
+    padding-right: 3rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.sfoglia a{
+    text-decoration: none;
+}
+
+.sfoglia a:hover{
+    text-decoration: underline !important;
+}
+
+
+.sfoglia p{
+    margin:0;
+    transition: 250ms;
+    font-size: medium !important;
+}
+
+.sfoglia p:after{
+    content: '\25BA';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    transition: 250ms;
+}
+
+.sfoglia p:hover{
+    padding-right: 18px;
+    transform: translateX(-10px);
+    opacity: 1;
+}
+
+.sfoglia:hover p:after{
+    opacity: 1;
+    right: 0;
+}
+
+.box-animation{
+    transition: transform 250ms;
+}
+
+.box-animation:hover{
+    transform: translateY(-10px);
+}
+
+/* Navbar */
+
+nav{
+    z-index: 10;
+    width: 100%;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+
+#nav-text {
+    padding-right: 3rem;
+    
+}
+
+#nav-text a{
+    padding-right: 2rem;
+    padding-left: 2rem;
+    margin-right: 0;
+    text-align: center;
+}
+
+.nav-text-style1{
+    border-right: solid 1px black;
+}
+
+
+/* Above the fold */
+
+#above-the-fold {
+    padding: 0 0 0 0;
+    box-shadow: 0 15px 10px black;
+}
+
+.carousel-item{
+    max-height: 500px;
+}
+
+.carousel-image {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+}
+
+.overlay2 {
+    background: linear-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0));
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+.carousel-caption {
+    z-index: 3;
+}
+
+.carousel-caption h3{
+    color: #FFE81F;
+}
+
+.car-dc-uni h3{
+    color: #0476F2;
+}
+
+.car-marvel h3 {
+    color: #ED1D24;
+}
+
+
+/* Sezione film */
+
+#sezione-film h4 {
+    color: white;
+}
+
+.film-style{
+    box-shadow: 0 0 40px #FFE81F;
+}
+
+.film-style-dc{
+    box-shadow: 0 0 40px #0476F2;
+}
+
+.film-style-marvel{
+    box-shadow: 0 0 40px #ED1D24;
+}
+
+.film {
+    height: 500px;
+    background-image: url('../img/placeholder.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.overlay {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#row-1 {
+    text-align: center;
+}
+
+#row-2 {
+    text-align: center;
+}
+
+#row-3 {
+    text-align: center;
+}
+
+
+
+/* Sezione serie tv */
+
+#sezione-serie{
+    background-color: white;
+}
+
+#sezione-serie h1{
+    padding-top: 20px;
+    text-decoration: underline #FFE81F;
+}
+
+
+#sezione-serie h3 {
+    font-size: 40px;
+    color: black;
+}
+
+#sezione-serie h4 {
+    font-size: 30px;
+    color: black;
+}
+
+#sezione-serie p {
+    font-size: 20px;
+    color: black;
+}
+
+#serie-style1 {
+    padding: 1rem 1rem 1rem 5rem;
+}
+
+#serie-style2 {
+    padding: 1rem 5rem 1rem 1rem;
+}
+
+
+.poster{
+    height: 530px;
+    background-image: url('../img/placeholder.jpg'); 
+    background-size: cover;
+    background-position: top center;
+}
+
+
+.desc1{
+    padding-left: 50px;
+}
+
+.desc2 {
+    text-align: right;
+    padding-right: 50px;
+}
+
+.btn-margin-right{
+    margin-right: 20px;
+}
+
+.btn-margin-left{
+    margin-right: 20px;
+}
+
+.btn-custom{
+    width: 160px;
+    height: 50px;
+    font-size: x-large;
+}
+
+.btn-style1{
+    background: linear-gradient(#FFE81F, rgb(255, 207, 33));
+    box-shadow: 1px 3px 10px black;
+    border: none;
+}
+
+    .btn-style1:hover{
+        background: linear-gradient(#ffe91f, rgb(255, 166, 33));
+        box-shadow: 1px 3px 10px black;
+    }
+
+    .btn-style1:focus{
+        background: linear-gradient(#FFE81F, rgb(255, 207, 33));
+        box-shadow: 1px 3px 10px black;
+        border: none;
+    }
+
+
+.btn-style2{
+    color: white;
+    background: linear-gradient(#606060, #464646);
+    box-shadow: 1px 3px 10px black;
+    border: none;
+}
+
+    .btn-style2:hover{
+        color: white;
+        background: linear-gradient(#555555, #3a3a3a);
+        box-shadow: 1px 3px 10px black;
+        border: black;
+    }
+
+    .btn-style2:focus{
+        color: white;
+        background: linear-gradient(#606060, #464646);
+        box-shadow: 1px 3px 10px black;
+        border: none;
+    }
+
+.btn-dc-uni{
+    background: linear-gradient(#0476F2, #0161c8);
+    color: white;
+}
+
+    .btn-dc-uni:hover{
+        background: linear-gradient(#0418f2,#095db7);
+        color: white;
+    }
+
+    .btn-dc-uni:focus{
+        background: linear-gradient(#0476F2, #0161c8);
+        color: white;
+    }
+
+.btn-marvel{
+    background: linear-gradient(#ED1D24, #bb161c);
+    color: white;
+}
+
+    .btn-marvel:hover{
+        background: linear-gradient(#c3171d,#9a1115);
+        color: white;
+    }
+
+    .btn-marvel:focus{
+        background: linear-gradient(#ED1D24, #bb161c);
+        color: white;
+    }
+
+/* Sezione videogiochi */
+
+#sezione-videogiochi {
+    background-image: url("../img/background2.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:top center;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.game p {
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+#sezione-videogiochi h1,h3,h4,p {
+    color: white;
+}
+
+.game-style1{
+    box-shadow: 0 0 40px #2E67F8;
+}
+
+.game-style2{
+    box-shadow: 0 0 40px #EB212E;
+}
+
+.game-style3{
+    box-shadow: 0 0 40px black;
+}
+
+.game {
+    height: 500px;
+    width: 100%;
+    background-image: url('../img/placeholder.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    
+}
+
+.game-marvel {
+    height: 550px;
+    width: 397px;
+}

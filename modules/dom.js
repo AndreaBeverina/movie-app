@@ -2,38 +2,10 @@ const apikey = "7a628d44";
 const URL_base = `https://www.omdbapi.com/?apikey=${apikey}&`;
 
 
-
-/*
-export const movieSearch = (s, type,indice) => {
-    const url = `${URL_base}t=${s}&type=${type}`;
-    fetch(url)
-        .then(response => response.json())
-        .then(results => {
-            const final_result = results.Search;
-            viewItems(final_result,indice);
-        })
-}
-*/
-
-/*
-const viewItems = (items) => {
-    let i=1;
-    
-
-    items.map((item) => {
-        const div_ID = `film-${i}`;
-        const title_ID = `film-title-${i}`;
-        const year_ID = `film-year-${i}`;
-        replaceMovieContent(item,div_ID,title_ID,year_ID);
-        i++;
-    })
-}
-*/
-
 /* Film */
-export const movieSearch = (s, type,indice) => {
-    let url = `${URL_base}t=${s}&type=${type}`;
-    if(indice == 3){
+export const movieSearch = (t, type,indice) => {
+    let url = `${URL_base}t=${t}&type=${type}`;
+    if(indice == 3 && url.includes("star%20wars")){
         url = `${URL_base}t=star%20wars&type=${type}`;
     }
     fetch(url)
@@ -67,6 +39,8 @@ const replaceMovieContent = (movie, divider_ID, title_ID, year_ID) => {
     div.replaceChild(h4,year_child);
     div.style.backgroundImage = `url(${movie.Poster})`;
 }
+
+
 
 
 
@@ -140,19 +114,19 @@ const replaceSeriePoster = (serie,posterID) => {
 
 
 
-/* Carousel */
-export const carouselSearch = (s,indice) => {
+/* Carousel usando la ricerca con S */
+export const carouselSearch = (s) => {
     let url = `${URL_base}s=${s}`;
 
     fetch(url)
         .then(response => response.json())
-        .then(result => {
-            viewItemsCarousel(result.Search,indice);
+        .then(results => {
+            viewItemsCarousel(results.Search);
         })
 }
 
-const viewItemsCarousel = (items,indice) => {
-    let i = indice+1;
+const viewItemsCarousel = (items) => {
+    let i = 1;
     items.map((item) => {
         let div_ID = `car-item-${i}`;
         let title_ID = `car-title-${i}`;
@@ -207,4 +181,116 @@ const replaceCarPlot = (item, divider_ID, plot_ID) => {
 const createSearchableString = (title) => {
     const stringa = title.replace(/\s/g, '%20');
     return stringa;
+}
+
+/* Carousel usando la ricera con T */
+export const carouselSearch_t = (t,indice,type) => {
+    let url = `${URL_base}t=${t}&type=${type}`;
+
+    fetch(url)
+        .then(response => response.json())
+        .then(result => {
+            viewItemsCarousel_t(result,indice);
+        })
+}
+
+const viewItemsCarousel_t = (item,indice) => {
+    let i = indice+1;
+    let div_ID = `car-item-${i}`;
+    let title_ID = `car-title-${i}`;        
+    let plot_ID = `car-plot-${i}`;
+    let img_ID = `car-img-${i}`;
+
+    replaceCarouselContent_t(item,div_ID,title_ID,plot_ID,img_ID);
+}
+
+const replaceCarouselContent_t = (item, divider_ID, title_ID, plot_ID, img_ID) => {
+    const div = document.getElementById(divider_ID);
+    const title_child = document.getElementById(title_ID);
+    const plot_child = document.getElementById(plot_ID);
+
+    const h3 = document.createElement("h3");
+    const text = document.createTextNode(item.Title);
+    h3.appendChild(text);
+
+    const p = document.createElement("p");
+    const text2 = document.createTextNode(item.Plot);
+    p.appendChild(text2);
+
+    div.replaceChild(h3,title_child);
+    div.replaceChild(p,plot_child);
+
+    document.getElementById(img_ID).src=`${item.Poster}`;
+}
+
+
+
+
+
+
+/* Videogiochi */
+export const videogameSearch = (s) => {
+    let url = `${URL_base}s=${s}&type=game`;
+
+    fetch(url)
+        .then(response => response.json())
+        .then(results => {
+            secondFetch(results.Search);
+        })
+}
+
+const secondFetch = (items) => {
+    let i = 1;
+    items.map((item) =>{
+        let url = `${URL_base}i=${item.imdbID}`;
+        fetch(url)
+            .then(response => response.json())
+            .then(result => {
+                viewItemsVideogames(result,i);
+                i++;
+            })
+    });
+}
+
+const viewItemsVideogames = (item, indice) => {
+    const div_ID = `game-${indice}`;
+    const title_ID = `game-title-${indice}`;
+    const year_ID = `game-year-${indice}`;
+    const genre_ID = `game-genre-${indice}`;
+    replaceVideoGameContent(item,div_ID,title_ID,year_ID,genre_ID);
+}
+
+const replaceVideoGameContent = (item, div_ID, title_ID, year_ID, genre_ID) => {
+    const div = document.getElementById(div_ID);
+    const title_child = document.getElementById(title_ID);
+    const year_child = document.getElementById(year_ID);
+    const genre_child = document.getElementById(genre_ID);
+
+    const h3 = document.createElement("h3");
+    const text = document.createTextNode(item.Title);
+    h3.appendChild(text);
+
+    const h4 = document.createElement("h4");
+    const text2 = document.createTextNode(item.Year);
+    h4.appendChild(text2);
+
+    const p = document.createElement("p");
+    const text3 = document.createTextNode(item.Genre);
+    p.appendChild(text3);
+
+    div.replaceChild(h3,title_child);
+    div.replaceChild(h4,year_child);
+    div.replaceChild(p,genre_child);
+    div.style.backgroundImage = `url(${item.Poster})`;
+}
+
+
+export const videogameSearchById = (game_ID,indice) => {
+    let url = `${URL_base}i=${game_ID}`;
+    let i = indice+1;
+    fetch(url)
+        .then(response => response.json())
+        .then(result => {
+            viewItemsVideogames(result,i);
+        })
 }
