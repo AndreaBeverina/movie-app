@@ -1,6 +1,8 @@
 const apikey = "7a628d44";
 const URL_base = `https://www.omdbapi.com/?apikey=${apikey}&`;
 
+//FIXME: avrebbe senso fare 4 moduli sepaatai. Un per ognuno delle funzionalità:
+// movieSearch, serieSearch, carouselSearch, videogameSearch
 
 /* Film */
 export const movieSearch = (t, type,indice) => {
