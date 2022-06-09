@@ -17,19 +17,44 @@
 <body style="background-image: url(/img/background3.jpg);">
 
     <!-- Navbar -->
-    <nav class="navbar bg-light sticky-top">
+    <nav class="navbar bg-light sticky-top navbar-pc">
         <div class="container-fluid">
             <a class="navbar-brand">
                 <img src="img/logotext3.png" alt="" width="130" height="100%" class="d-inline-block align-text-top">
             </a>
             <div class="col d-flex justify-content-end" id="nav-text">
                 <a class="navbar-brand mb-0 h1 nav-text-style1" href="home.html">Star Wars</a>
-                <a class="navbar-brand mb-0 h1 nav-text-style1" href="#" style="text-decoration:underline; text-decoration-color:#0476F2; text-decoration-thickness: 4px">DC Universe</a>
+                <a class="navbar-brand mb-0 h1 nav-text-style1" href="dc-uni.html" style="text-decoration:underline; text-decoration-color:#0476F2; text-decoration-thickness: 4px">DC Universe</a>
                 <a class="navbar-brand mb-0 h1" href="marvel.html">Marvel</a>
             </div>
             
         </div>
     </nav>
+
+    <!-- Navbar small screens -->
+    <nav class="navbar navbar-expand-lg bg-light sticky-top navbar-small">
+        <div class="container-fluid">
+          <a class="navbar-brand navbar-brand-small" href="#">
+            <img src="img/logotext3.png" alt="" width="130" height="100%" class="d-inline-block align-text-top">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="home.html">Star Wars</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active active-dc" href="dc-uni.html">DC Comics</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="marvel.html">Marvel</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
     <!-- Slideshow - Above the fold -->
     <div class="container-fluid" id="above-the-fold">
@@ -45,7 +70,7 @@
               <div class="carousel-item active" data-bs-interval="5000">
                 <div class="overlay2"></div>
                 <img src="img/placeholder2.jpg" class="d-block w-100 carousel-image" alt="" id="car-img-1">
-                <div class="carousel-caption d-none d-md-block" id="car-item-1">
+                <div class="carousel-caption d-block" id="car-item-1">
                   <h3 id="car-title-1">Titolo</h3>
                   <p id="car-plot-1">Plot</p>
                 </div>
@@ -54,7 +79,7 @@
               <div class="carousel-item">
                 <div class="overlay2"></div>
                 <img src="img/placeholder.jpg" class="d-block w-100 carousel-image" alt="" id="car-img-2">
-                <div class="carousel-caption d-none d-md-block" id="car-item-2">
+                <div class="carousel-caption d-block" id="car-item-2">
                   <h3 id="car-title-2">Titolo</h3>
                   <p id="car-plot-2">Plot</p>
                 </div>
@@ -63,7 +88,7 @@
               <div class="carousel-item">
                 <div class="overlay2"></div>
                 <img src="img/placeholder2.jpg" class="d-block w-100 carousel-image" alt="" id="car-img-3">
-                <div class="carousel-caption d-none d-md-block" id="car-item-3">
+                <div class="carousel-caption d-block" id="car-item-3">
                   <h3 id="car-title-3">Titolo</h3>
                   <p id="car-plot-3">Plot</p>
                 </div>
@@ -72,7 +97,7 @@
               <div class="carousel-item">
                 <div class="overlay2"></div>
                 <img src="img/placeholder.jpg" class="d-block w-100 carousel-image" alt="" id="car-img-4">
-                <div class="carousel-caption d-none d-md-block" id="car-item-4">
+                <div class="carousel-caption d-block" id="car-item-4">
                   <h3 id="car-title-4">Titolo</h3>
                   <p id="car-plot-4">Plot</p>
                 </div>
@@ -98,7 +123,7 @@
         <!-- Prima riga -->
         <div class="row p-3 justify-content-around align-items-center" id="row-1">
 
-            <div class="col-3 p-3">
+            <div class="col-md-3 col-12 p-3">
                 <a href="#">
                     <div class="d-flex flex-column justify-content-end align-items-center film film-style-dc box-animation" id="film-1">
                         <h3 id="film-title-1">Titolo 1</h3>
@@ -107,7 +132,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-3 p-3">
+            <div class="col-md-3 col-12 p-3">
                 <a href="#">
                     <div class="d-flex flex-column justify-content-end align-items-center film film-style-dc box-animation" id="film-2">
                         <h3 id="film-title-2">Titolo 2</h3>
@@ -116,7 +141,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-3 p-3">
+            <div class="col-md-3 col-12 p-3">
                 <a href="#">
                     <div class="d-flex flex-column justify-content-end align-items-center film film-style-dc box-animation" id="film-3">
                         <h3 id="film-title-3">Titolo 3</h3>
@@ -131,7 +156,7 @@
         <!-- Seconda riga -->
         <div class="row p-3 justify-content-around align-items-center" id="row-2">
 
-            <div class="col-3 p-3">
+            <div class="col-md-3 col-12 p-3">
                 <a href="#">
                     <div class="d-flex flex-column justify-content-end align-items-center film film-style-dc box-animation" id="film-4">
                         <h3 id="film-title-4">Titolo 4</h3>
@@ -140,7 +165,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-3 p-3">
+            <div class="col-md-3 col-12 p-3">
                 <a href="#">
                     <div class="d-flex flex-column justify-content-end align-items-center film film-style-dc box-animation" id="film-5">
                         <h3 id="film-title-5">Titolo 5</h3>
@@ -149,7 +174,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-3 p-3">
+            <div class="col-md-3 col-12 p-3">
                 <a href="#">
                     <div class="d-flex flex-column justify-content-end align-items-center film film-style-dc box-animation" id="film-6">
                         <h3 id="film-title-6">Titolo 6</h3>
@@ -164,7 +189,7 @@
         <!-- Terza riga -->
         <div class="row p-3 justify-content-around align-items-center" id="row-3">
 
-            <div class="col-3 p-3">
+            <div class="col-md-3 col-12 p-3">
                 <a href="#">
                     <div class="d-flex flex-column justify-content-end align-items-center film film-style-dc box-animation" id="film-7">
                         <h3 id="film-title-7">Titolo 7</h3>
@@ -173,7 +198,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-3 p-3">
+            <div class="col-md-3 col-12 p-3">
                 <a href="#">
                     <div class="d-flex flex-column justify-content-end align-items-center film film-style-dc box-animation" id="film-8">
                         <h3 id="film-title-8">Titolo 8</h3>
@@ -182,7 +207,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-3 p-3">
+            <div class="col-md-3 col-12 p-3">
                 <a href="#">
                     <div class="d-flex flex-column justify-content-end align-items-center film film-style-dc box-animation" id="film-9">
                         <h3 id="film-title-9">Titolo 9</h3>
@@ -206,8 +231,8 @@
         <h1 style="color:#0476F2; text-decoration: none;">Serie TV di successo</h1>
 
         <div class="row justify-content-start align-items-center" id="serie-style1">
-            <div class="col-3 poster" id="poster-1"></div>
-            <div class="col-7 desc1" id="serie-1">
+            <div class="col-md-3 col-12 poster" id="poster-1"></div>
+            <div class="col-md-7 col-12 desc1" id="serie-1">
                 <div class="row" id="row-titolo-1">
                     <h3 id="serie-titolo-1">Titolo</h3>
                 </div>
@@ -228,8 +253,8 @@
         <hr>
 
         <div class="row justify-content-end align-items-center" id="serie-style2">
-            <div class="col-3 order-2 poster" id="poster-2"></div>
-            <div class="col-7 order-1 desc2" id="serie-2">
+            <div class="col-md-3 col-12 order-2 poster" id="poster-2"></div>
+            <div class="col-md-7 col-12 order-1 desc2" id="serie-2">
                 <div class="row" id="row-titolo-2">
                     <h3 id="serie-titolo-2">Titolo</h3>
                 </div>
@@ -249,8 +274,8 @@
         <hr>
 
         <div class="row justify-content-start align-items-center" id="serie-style1">
-            <div class="col-3 poster" id="poster-3"></div>
-            <div class="col-7 desc1" id="serie-3">
+            <div class="col-md-3 col-12 poster" id="poster-3"></div>
+            <div class="col-md-7 col-12 desc1" id="serie-3">
                 <div class="row" id="row-titolo-3">
                     <h3 id="serie-titolo-3">Titolo</h3>
                 </div>
@@ -270,8 +295,8 @@
         <hr>
 
         <div class="row justify-content-end align-items-center" id="serie-style2">
-            <div class="col-3 order-2 poster" id="poster-4"></div>
-            <div class="col-7 order-1 desc2" id="serie-4">
+            <div class="col-md-3 col-12 order-2 poster" id="poster-4"></div>
+            <div class="col-md-7 col-12 order-1 desc2" id="serie-4">
                 <div class="row" id="row-titolo-4">
                     <h3 id="serie-titolo-4">Titolo</h3>
                 </div>
@@ -301,7 +326,7 @@
         <!-- Prima riga -->
         <div class="row p-3 justify-content-around align-items-center" id="row-1">
 
-            <div class="col-3 p-2">
+            <div class="col-md-3 col-12 p-2">
                 <a href="#">
                     <div class="d-flex flex-column justify-content-end align-items-center game game-style3 box-animation" id="game-1">
                         <h3 id="game-title-1">Titolo 1</h3>
@@ -311,7 +336,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-3 p-2">
+            <div class="col-md-3 col-12 p-2">
                 <a href="#">
                     <div class="d-flex flex-column justify-content-end align-items-center game game-style3 box-animation" id="game-2">
                         <h3 id="game-title-2">Titolo 2</h3>
@@ -321,7 +346,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-3 p-2">
+            <div class="col-md-3 col-12 p-2">
                 <a href="#">
                     <div class="d-flex flex-column justify-content-end align-items-center game game-style3 box-animation" id="game-3">
                         <h3 id="game-title-3">Titolo 3</h3>
@@ -337,7 +362,7 @@
         <!-- Seconda riga -->
         <div class="row p-3 justify-content-around align-items-center" id="row-2">
 
-            <div class="col-3 p-3">
+            <div class="col-md-3 col-12 p-3">
                 <a href="#">
                     <div class="d-flex flex-column justify-content-end align-items-center game game-style3 box-animation" id="game-4">
                         <h3 id="game-title-4">Titolo 4</h3>
@@ -347,7 +372,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-3 p-3">
+            <div class="col-md-3 col-12 p-3">
                 <a href="#">
                     <div class="d-flex flex-column justify-content-end align-items-center game game-style3 box-animation" id="game-5">
                         <h3 id="game-title-5">Titolo 5</h3>
@@ -357,7 +382,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-3 p-3">
+            <div class="col-md-3 col-12 p-3">
                 <a href="#">
                     <div class="d-flex flex-column justify-content-end align-items-center game game-style3 box-animation" id="game-6">
                         <h3 id="game-title-6">Titolo 6</h3>
@@ -382,7 +407,7 @@
         const film_pool = ["batman%20begins","dark%20knight","dark%20knight%20rises","joker","watchmen","suicide%20squad","aquaman","justice%20league","wonder%20woman"];
         const serie_pool = ["titans","the%20flash","gotham","arrow"];
         const carousel_pool = ["dark%20knight","joker","titans","the%20flash"];
-        const gameID_pool = ["tt1282022","tt1568322","tt3554580","tt2842418","tt3757728","tt5785964",];
+        const gameID_pool = ["tt1282022","tt1568322","tt3554580","tt2842418","tt3757728","tt5785964"];
 
 
         import {movieSearch, serieSearch, carouselSearch_t, videogameSearch, videogameSearchById} from "/modules/dom.js";

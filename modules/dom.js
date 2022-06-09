@@ -1,20 +1,18 @@
 const apikey = "7a628d44";
 const URL_base = `https://www.omdbapi.com/?apikey=${apikey}&`;
 
-//FIXME: avrebbe senso fare 4 moduli sepaatai. Un per ognuno delle funzionalità:
-// movieSearch, serieSearch, carouselSearch, videogameSearch
 
 /* Film */
-export const movieSearch = (t, type,indice) => {
+export const movieSearch = async (t, type,indice) => {
     let url = `${URL_base}t=${t}&type=${type}`;
     if(indice == 3 && url.includes("star%20wars")){
         url = `${URL_base}t=star%20wars&type=${type}`;
     }
-    fetch(url)
-        .then(response => response.json())
-        .then(result => {
-            viewItems(result,indice);
-        })
+
+    const response = await fetch(url);
+    const result = await response.json();
+
+    viewItems(result,indice);
 }
 
 const viewItems = (item,indice) => {
@@ -125,6 +123,7 @@ export const carouselSearch = (s) => {
         .then(results => {
             viewItemsCarousel(results.Search);
         })
+        
 }
 
 const viewItemsCarousel = (items) => {

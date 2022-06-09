@@ -88,12 +88,25 @@ a {
     transform: translateY(-10px);
 }
 
+@media screen and (max-width: 768px){
+    .sfoglia{
+        padding-top: 2rem;
+        padding-right: 0;
+        justify-content: center !important;
+    }
+}
+
 /* Navbar */
 
 nav{
     z-index: 10;
     width: 100%;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    overflow: hidden;
+}
+
+.navbar-brand{
+    padding-left: 20px;
 }
 
 #nav-text {
@@ -111,6 +124,44 @@ nav{
 .nav-text-style1{
     border-right: solid 1px black;
 }
+
+.navbar-small{
+    display: none;
+}
+      
+.navbar-brand-small{
+    padding-left: 0;
+}
+
+.active{
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    
+}
+
+.active-sw{
+    text-decoration-color: #FFE81F;
+}
+
+.active-dc {
+    text-decoration-color: #0476F2;
+}
+
+.active-marvel {
+    text-decoration-color: #ED1D24;
+}
+
+
+        @media screen and (max-width: 768px){
+            .navbar-pc{
+                display: none;
+            }
+
+            .navbar-small{
+                display: inherit;
+            }
+        }
+
 
 
 /* Above the fold */
@@ -156,6 +207,11 @@ nav{
     color: #ED1D24;
 }
 
+@media screen and (max-width: 768px){
+    .carousel-caption{
+        display: inherit;
+    }
+}
 
 /* Sezione film */
 
@@ -340,6 +396,35 @@ nav{
         color: white;
     }
 
+@media screen and (max-width: 768px) {
+
+
+    #serie-style1 {
+        padding: 1rem;
+    }
+
+    .desc1{
+        text-align: center;
+        padding: 1rem;
+    }
+
+    #serie-style2 {
+        padding: 1rem;
+    }
+       
+    .desc2 {
+        text-align: center;
+        padding: 1rem;
+        order: 3  !important;
+    }
+
+    .btn-custom{
+        width: 120px;
+        height: 50px;
+        font-size: large;
+    }
+}
+
 /* Sezione videogiochi */
 
 #sezione-videogiochi {
@@ -386,4 +471,10 @@ nav{
 .game-marvel {
     height: 550px;
     width: 397px;
+}
+
+@media screen and (max-width: 768px){
+    .game-marvel{
+        width: 100%;
+    }
 }

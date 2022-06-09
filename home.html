@@ -1,124 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" type="image/x-icon" href="/img/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600&display=swap"
+        rel="stylesheet">
 
     <title>Geek Planet</title>
 
 </head>
-<body style ="background-image: url(../img/background.jpeg)">
+
+<body style="background-image: url(../img/background.jpeg)">
 
     <!-- Navbar -->
-    <nav class="navbar bg-light sticky-top">
-        <div class="container-fluid">
+    <nav class="navbar bg-light sticky-top navbar-pc">
+        <div class="container-fluid p-0">
             <a class="navbar-brand">
                 <img src="img/logotext3.png" alt="" width="130" height="100%" class="d-inline-block align-text-top">
             </a>
             <div class="col d-flex justify-content-end" id="nav-text">
-                <a class="navbar-brand mb-0 h1 nav-text-style1" href="#" style="text-decoration:underline; text-decoration-color:#FFE81F; text-decoration-thickness: 4px;">Star Wars</a>
+                <a class="navbar-brand mb-0 h1 nav-text-style1" href="home.html"
+                    style="text-decoration:underline; text-decoration-color:#FFE81F; text-decoration-thickness: 4px;">Star
+                    Wars</a>
                 <a class="navbar-brand mb-0 h1 nav-text-style1" href="dc-uni.html">DC Universe</a>
                 <a class="navbar-brand mb-0 h1" href="marvel.html">Marvel</a>
             </div>
-            
         </div>
     </nav>
+
+    <!-- Navbar small screens -->
+    <nav class="navbar navbar-expand-lg bg-light sticky-top navbar-small">
+        <div class="container-fluid">
+          <a class="navbar-brand navbar-brand-small" href="#">
+            <img src="img/logotext3.png" alt="" width="130" height="100%" class="d-inline-block align-text-top">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active active-sw" href="home.html">Star Wars</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="dc-uni.html">DC Comics</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="marvel.html">Marvel</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
     <!-- Slideshow - Above the fold -->
     <div class="container-fluid" id="above-the-fold">
         <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
             </div>
 
             <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="5000">
-                <div class="overlay2"></div>
-                <img src="img/placeholder2.jpg" class="d-block w-100 carousel-image" alt="" id="car-img-1">
-                <div class="carousel-caption d-none d-md-block" id="car-item-1">
-                  <h3 id="car-title-1">Titolo</h3>
-                  <p id="car-plot-1">Plot</p>
+                <div class="carousel-item active" data-bs-interval="5000">
+                    <div class="overlay2"></div>
+                    <img src="img/placeholder2.jpg" class="d-block w-100 carousel-image" alt="" id="car-img-1">
+                    <div class="carousel-caption d-block" id="car-item-1">
+                        <h3 id="car-title-1">Titolo</h3>
+                        <p id="car-plot-1">Plot</p>
+                    </div>
                 </div>
-              </div>
 
-              <div class="carousel-item">
-                <div class="overlay2"></div>
-                <img src="img/placeholder.jpg" class="d-block w-100 carousel-image" alt="" id="car-img-2">
-                <div class="carousel-caption d-none d-md-block" id="car-item-2">
-                  <h3 id="car-title-2">Titolo</h3>
-                  <p id="car-plot-2">Plot</p>
+                <div class="carousel-item">
+                    <div class="overlay2"></div>
+                    <img src="img/placeholder.jpg" class="d-block w-100 carousel-image" alt="" id="car-img-2">
+                    <div class="carousel-caption d-block" id="car-item-2">
+                        <h3 id="car-title-2">Titolo</h3>
+                        <p id="car-plot-2">Plot</p>
+                    </div>
                 </div>
-              </div>
 
-              <div class="carousel-item">
-                <div class="overlay2"></div>
-                <img src="img/placeholder2.jpg" class="d-block w-100 carousel-image" alt="" id="car-img-3">
-                <div class="carousel-caption d-none d-md-block" id="car-item-3">
-                  <h3 id="car-title-3">Titolo</h3>
-                  <p id="car-plot-3">Plot</p>
+                <div class="carousel-item">
+                    <div class="overlay2"></div>
+                    <img src="img/placeholder2.jpg" class="d-block w-100 carousel-image" alt="" id="car-img-3">
+                    <div class="carousel-caption d-block" id="car-item-3">
+                        <h3 id="car-title-3">Titolo</h3>
+                        <p id="car-plot-3">Plot</p>
+                    </div>
                 </div>
-              </div>
 
-              <div class="carousel-item">
-                <div class="overlay2"></div>
-                <img src="img/placeholder.jpg" class="d-block w-100 carousel-image" alt="" id="car-img-4">
-                <div class="carousel-caption d-none d-md-block" id="car-item-4">
-                  <h3 id="car-title-4">Titolo</h3>
-                  <p id="car-plot-4">Plot</p>
+                <div class="carousel-item">
+                    <div class="overlay2"></div>
+                    <img src="img/placeholder.jpg" class="d-block w-100 carousel-image" alt="" id="car-img-4">
+                    <div class="carousel-caption d-block" id="car-item-4">
+                        <h3 id="car-title-4">Titolo</h3>
+                        <p id="car-plot-4">Plot</p>
+                    </div>
                 </div>
-              </div>
 
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
             </button>
-          </div>
+        </div>
     </div>
 
 
-    <!-- Sezione film --> 
+    <!-- Sezione film -->
     <div class="container-fluid sezione-style1" id="sezione-film">
         <h1 style="color:#FFE81F">Rivivi la saga completa</h1>
 
         <!-- Prequel -->
         <div class="row p-3 justify-content-around align-items-center" id="row-1">
-            
-            <div class="col-3 p-3">
+
+            <div class="col-md-3 col-12 p-3">
                 <a href="#">
-                    <div class="d-flex flex-column justify-content-end align-items-center film film-style box-animation" id="film-1">
+                    <div class="d-flex flex-column justify-content-end align-items-center film film-style box-animation"
+                        id="film-1">
                         <h3 id="film-title-1">Titolo 1</h3>
                         <h4 id="film-year-1">Anno</h4>
                         <div class="overlay"></div>
                     </div>
                 </a>
             </div>
-            <div class="col-3 p-3">
+            <div class="col-md-3 col-12 p-3">
                 <a href="#">
-                    <div class="d-flex flex-column justify-content-end align-items-center film film-style box-animation" id="film-2">
+                    <div class="d-flex flex-column justify-content-end align-items-center film film-style box-animation"
+                        id="film-2">
                         <h3 id="film-title-2">Titolo 2</h3>
                         <h4 id="film-year-2">Anno</h4>
                         <div class="overlay"></div>
                     </div>
                 </a>
             </div>
-            <div class="col-3 p-3">
+            <div class="col-md-3 col-12 p-3">
                 <a href="#">
-                    <div class="d-flex flex-column justify-content-end align-items-center film film-style box-animation" id="film-3">
+                    <div class="d-flex flex-column justify-content-end align-items-center film film-style box-animation"
+                        id="film-3">
                         <h3 id="film-title-3">Titolo 3</h3>
                         <h4 id="film-year-3">Anno</h4>
                         <div class="overlay"></div>
@@ -131,27 +170,30 @@
         <!-- Original -->
         <div class="row p-3 justify-content-around align-items-center" id="row-2">
 
-            <div class="col-3 p-3">
+            <div class="col-md-3 col-12 p-3">
                 <a href="#">
-                    <div class="d-flex flex-column justify-content-end align-items-center film film-style box-animation" id="film-4">
+                    <div class="d-flex flex-column justify-content-end align-items-center film film-style box-animation"
+                        id="film-4">
                         <h3 id="film-title-4">Titolo 4</h3>
                         <h4 id="film-year-4">Anno</h4>
                         <div class="overlay"></div>
                     </div>
                 </a>
             </div>
-            <div class="col-3 p-3">
+            <div class="col-md-3 col-12 p-3">
                 <a href="#">
-                    <div class="d-flex flex-column justify-content-end align-items-center film film-style box-animation" id="film-5">
+                    <div class="d-flex flex-column justify-content-end align-items-center film film-style box-animation"
+                        id="film-5">
                         <h3 id="film-title-5">Titolo 5</h3>
                         <h4 id="film-year-5">Anno</h4>
                         <div class="overlay"></div>
                     </div>
                 </a>
             </div>
-            <div class="col-3 p-3">
+            <div class="col-md-3 col-12 p-3">
                 <a href="#">
-                    <div class="d-flex flex-column justify-content-end align-items-center film film-style box-animation" id="film-6">
+                    <div class="d-flex flex-column justify-content-end align-items-center film film-style box-animation"
+                        id="film-6">
                         <h3 id="film-title-6">Titolo 6</h3>
                         <h4 id="film-year-6">Anno</h4>
                         <div class="overlay"></div>
@@ -164,27 +206,30 @@
         <!-- Sequel -->
         <div class="row p-3 justify-content-around align-items-center" id="row-3">
 
-            <div class="col-3 p-3">
+            <div class="col-md-3 col-12 p-3">
                 <a href="#">
-                    <div class="d-flex flex-column justify-content-end align-items-center film film-style box-animation" id="film-7">
+                    <div class="d-flex flex-column justify-content-end align-items-center film film-style box-animation"
+                        id="film-7">
                         <h3 id="film-title-7">Titolo 7</h3>
                         <h4 id="film-year-7">Anno</h4>
                         <div class="overlay"></div>
                     </div>
                 </a>
             </div>
-            <div class="col-3 p-3">
+            <div class="col-md-3 col-12 p-3">
                 <a href="#">
-                    <div class="d-flex flex-column justify-content-end align-items-center film film-style box-animation" id="film-8">
+                    <div class="d-flex flex-column justify-content-end align-items-center film film-style box-animation"
+                        id="film-8">
                         <h3 id="film-title-8">Titolo 8</h3>
                         <h4 id="film-year-8">Anno</h4>
                         <div class="overlay"></div>
                     </div>
                 </a>
             </div>
-            <div class="col-3 p-3">
+            <div class="col-md-3 col-12 p-3">
                 <a href="#">
-                    <div class="d-flex flex-column justify-content-end align-items-center film film-style box-animation" id="film-9">
+                    <div class="d-flex flex-column justify-content-end align-items-center film film-style box-animation"
+                        id="film-9">
                         <h3 id="film-title-9">Titolo 9</h3>
                         <h4 id="film-year-9">Anno</h4>
                         <div class="overlay"></div>
@@ -195,7 +240,9 @@
         </div>
 
         <div class="col d-flex justify-content-end sfoglia">
-            <a href="#sezione-film" style="color:white"><p>Scopri tutti i nostri film a tema</p></a>
+            <a href="#sezione-film" style="color:white">
+                <p>Scopri tutti i nostri film a tema</p>
+            </a>
         </div>
 
     </div>
@@ -206,8 +253,8 @@
         <h1>Serie TV di successo</h1>
 
         <div class="row justify-content-start align-items-center" id="serie-style1">
-            <div class="col-3 poster" id="poster-1"></div>
-            <div class="col-7 desc1" id="serie-1">
+            <div class="col-md-3 col-12 poster" id="poster-1"></div>
+            <div class="col-md-7 col-12 desc1" id="serie-1">
                 <div class="row" id="row-titolo-1">
                     <h3 id="serie-titolo-1">Titolo</h3>
                 </div>
@@ -218,18 +265,19 @@
                     <p id="serie-plot-1">Plot</p>
                 </div>
                 <div>
-                    <button type="button" href="#" class="btn btn-custom btn-style1 btn-margin-right">Guarda Ora</button>
+                    <button type="button" href="#" class="btn btn-custom btn-style1 btn-margin-right">Guarda
+                        Ora</button>
                     <button type="button" href="#" class="btn btn-custom btn-style2">Download</button>
                 </div>
-                
+
             </div>
         </div>
 
         <hr>
 
         <div class="row justify-content-end align-items-center" id="serie-style2">
-            <div class="col-3 order-2 poster" id="poster-2"></div>
-            <div class="col-7 order-1 desc2" id="serie-2">
+            <div class="col-md-3 col-12 order-2 poster" id="poster-2"></div>
+            <div class="col-md-7 col-12 order-1 desc2" id="serie-2">
                 <div class="row" id="row-titolo-2">
                     <h3 id="serie-titolo-2">Titolo</h3>
                 </div>
@@ -249,8 +297,8 @@
         <hr>
 
         <div class="row justify-content-start align-items-center" id="serie-style1">
-            <div class="col-3 poster" id="poster-3"></div>
-            <div class="col-7 desc1" id="serie-3">
+            <div class="col-md-3 col-12 poster" id="poster-3"></div>
+            <div class="col-md-7 col-12 desc1" id="serie-3">
                 <div class="row" id="row-titolo-3">
                     <h3 id="serie-titolo-3">Titolo</h3>
                 </div>
@@ -270,8 +318,8 @@
         <hr>
 
         <div class="row justify-content-end align-items-center" id="serie-style2">
-            <div class="col-3 order-2 poster" id="poster-4"></div>
-            <div class="col-7 order-1 desc2" id="serie-4">
+            <div class="col-md-3 col-12 order-2 poster" id="poster-4"></div>
+            <div class="col-md-7 col-12 order-1 desc2" id="serie-4">
                 <div class="row" id="row-titolo-4">
                     <h3 id="serie-titolo-4">Titolo</h3>
                 </div>
@@ -289,7 +337,9 @@
         </div>
 
         <div class="col d-flex justify-content-end sfoglia">
-            <a href="#sezione-serie" style="color:black; padding-bottom: 2rem;"><p>Scopri tutti i nostri film a tema</p></a>
+            <a href="#sezione-serie" style="color:black; padding-bottom: 2rem;">
+                <p>Scopri tutti i nostri film a tema</p>
+            </a>
         </div>
     </div>
 
@@ -300,9 +350,10 @@
         <!-- Prima riga -->
         <div class="row p-3 justify-content-around align-items-center" id="row-1">
 
-            <div class="col-3 p-3">
+            <div class="col-md-3 col-12 p-3">
                 <a href="#">
-                    <div class="d-flex flex-column justify-content-end align-items-center game game-style1 box-animation" id="game-1">
+                    <div class="d-flex flex-column justify-content-end align-items-center game game-style1 box-animation"
+                        id="game-1">
                         <h3 id="game-title-1">Titolo 1</h3>
                         <h4 id="game-year-1">Anno</h4>
                         <p id="game-genre-1">Genere</p>
@@ -310,9 +361,10 @@
                     </div>
                 </a>
             </div>
-            <div class="col-3 p-3">
+            <div class="col-md-3 col-12 p-3">
                 <a href="#">
-                    <div class="d-flex flex-column justify-content-end align-items-center game game-style1 box-animation" id="game-2">
+                    <div class="d-flex flex-column justify-content-end align-items-center game game-style1 box-animation"
+                        id="game-2">
                         <h3 id="game-title-2">Titolo 2</h3>
                         <h4 id="game-year-2">Anno</h4>
                         <p id="game-genre-2">Genere</p>
@@ -320,9 +372,10 @@
                     </div>
                 </a>
             </div>
-            <div class="col-3 p-3">
+            <div class="col-md-3 col-12 p-3">
                 <a href="#">
-                    <div class="d-flex flex-column justify-content-end align-items-center game game-style1 box-animation" id="game-3">
+                    <div class="d-flex flex-column justify-content-end align-items-center game game-style1 box-animation"
+                        id="game-3">
                         <h3 id="game-title-3">Titolo 3</h3>
                         <h4 id="game-year-3">Anno</h4>
                         <p id="game-genre-3">Genere</p>
@@ -336,9 +389,10 @@
         <!-- Seconda riga -->
         <div class="row p-3 justify-content-around align-items-center" id="row-2">
 
-            <div class="col-3 p-3">
+            <div class="col-md-3 col-12 p-3">
                 <a href="#">
-                    <div class="d-flex flex-column justify-content-end align-items-center game game-style2 box-animation" id="game-4">
+                    <div class="d-flex flex-column justify-content-end align-items-center game game-style2 box-animation"
+                        id="game-4">
                         <h3 id="game-title-4">Titolo 4</h3>
                         <h4 id="game-year-4">Anno</h4>
                         <p id="game-genre-4">Genere</p>
@@ -346,9 +400,10 @@
                     </div>
                 </a>
             </div>
-            <div class="col-3 p-3">
+            <div class="col-md-3 col-12 p-3">
                 <a href="#">
-                    <div class="d-flex flex-column justify-content-end align-items-center game game-style2 box-animation" id="game-5">
+                    <div class="d-flex flex-column justify-content-end align-items-center game game-style2 box-animation"
+                        id="game-5">
                         <h3 id="game-title-5">Titolo 5</h3>
                         <h4 id="game-year-5">Anno</h4>
                         <p id="game-genre-5">Genere</p>
@@ -356,9 +411,10 @@
                     </div>
                 </a>
             </div>
-            <div class="col-3 p-3">
+            <div class="col-md-3 col-12 p-3">
                 <a href="#">
-                    <div class="d-flex flex-column justify-content-end align-items-center game game-style2 box-animation" id="game-6">
+                    <div class="d-flex flex-column justify-content-end align-items-center game game-style2 box-animation"
+                        id="game-6">
                         <h3 id="game-title-6">Titolo 6</h3>
                         <h4 id="game-year-6">Anno</h4>
                         <p id="game-genre-6">Genere</p>
@@ -370,44 +426,49 @@
         </div>
 
         <div class="col d-flex justify-content-end sfoglia">
-            <a href="#sezione-videogiochi" style="color:white"><p>Scopri tutti i nostri film a tema</p></a>
+            <a href="#sezione-videogiochi" style="color:white">
+                <p>Scopri tutti i nostri film a tema</p>
+            </a>
         </div>
 
     </div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <script type="module">
-        //FIXME: IMPORTANTE. Mettere tutte le import prima di qualsiasi altra cosa.
-
-        //FIXME: Controllare il console.log perchè sono presenti errori sul DOM
-        const ep_pool = ["I","II","III","IV","V","VI","VII","VIII","IX"];
-        const serie_pool = ["boba","obi-wan","mandalorian","the%20clone%20wars"];
-
-         //FIXME: Essendo un unico blocco di codice mettere tutte le dichiarazioni in alto dopo le import
-        let type = "movie";
-
-        import {movieSearch, serieSearch, carouselSearch, videogameSearch} from "/modules/dom.js";
-        
-        let title = "star%20wars"; 
-        carouselSearch(title);
-
-        //FIXME: usare array.map
-        for(let i=0; i<ep_pool.length; i++){
-            title = `star%20wars:%20episode%20${ep_pool[i]}`;
-            movieSearch(title,type,i);
-        }
-
-        type="series"
-        for(let i=0; i<serie_pool.length; i++){
-            title = `${serie_pool[i]}`;
-            serieSearch(title,type,i);
-        }
-        
-        title = "star%20wars";
-        videogameSearch(title);     
-        
-
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+        <script type="module">
+            //FIXME: IMPORTANTE. Mettere tutte le import prima di qualsiasi altra cosa.
+    
+            //FIXME: Controllare il console.log perchè sono presenti errori sul DOM
+            const ep_pool = ["I","II","III","IV","V","VI","VII","VIII","IX"];
+            const serie_pool = ["boba","obi-wan","mandalorian","the%20clone%20wars"];
+    
+             //FIXME: Essendo un unico blocco di codice mettere tutte le dichiarazioni in alto dopo le import
+            let type = "movie";
+    
+            import {movieSearch, serieSearch, carouselSearch, videogameSearch} from "/modules/dom.js";
+            
+            let title = "star%20wars"; 
+            carouselSearch(title);
+    
+            //FIXME: usare array.map
+            for(let i=0; i<ep_pool.length; i++){
+                title = `star%20wars:%20episode%20${ep_pool[i]}`;
+                movieSearch(title,type,i);
+            }
+    
+            type="series"
+            for(let i=0; i<serie_pool.length; i++){
+                title = `${serie_pool[i]}`;
+                serieSearch(title,type,i);
+            }
+            
+            title = "star%20wars";
+            videogameSearch(title);     
+            
+    
+        </script>
 </body>
+
 </html>
