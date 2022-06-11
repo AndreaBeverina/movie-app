@@ -404,46 +404,56 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script type="module">
 
+        import { movieSearch } from "/modules/movie-search.js";
+        import { serieSearch } from "/modules/series-search.js";
+        import { carouselSearch_t } from "/modules/carousel-search.js";
+        import { videogameSearch,videogameSearchById } from "/modules/videogame-search.js";
+        import { content_type }from "./modules/api-utilities.js";
+
         const film_pool = ["batman%20begins","dark%20knight","dark%20knight%20rises","joker","watchmen","suicide%20squad","aquaman","justice%20league","wonder%20woman"];
         const serie_pool = ["titans","the%20flash","gotham","arrow"];
         const carousel_pool = ["dark%20knight","joker","titans","the%20flash"];
-        const gameID_pool = ["tt1282022","tt1568322","tt3554580","tt2842418","tt3757728","tt5785964"];
-
-
-        import {movieSearch, serieSearch, carouselSearch_t, videogameSearch, videogameSearchById} from "/modules/dom.js";
+        const gameID_pool = ["tt1282022","tt1568322","tt3554580","tt2842418","tt3757728","tt5785964"];       
+        let type = content_type.MOVIE;
+        let title = "";
+        let i=0;
         
-
-        let type = "movie";
-        for(let i=0; i<film_pool.length; i++){
-            let title = `${film_pool[i]}`;
-            movieSearch(title,type,i);
-        }
-
-        type="series"
-        for(let i=0; i<serie_pool.length; i++){
-            let title = `${serie_pool[i]}`;
-            serieSearch(title,type,i);
-        }
-        
-        type = "movie";
-        for(let i=0; i<carousel_pool.length; i++){
-            let title = `${carousel_pool[i]}`;
+        carousel_pool.map((item) =>{
+            title = `${item}`;
             if(i>1){
-                type = "series";
+                type = content_type.SERIES;
             }
             carouselSearch_t(title,i,type);
-        }
-        
-        /*  importare videogameSearch se si riutilizza questo
-        let title = "batman:%20arkham";
-        videogameSearch(title);
-        */
+            i++;
+        })
 
 
-        for(let i=0; i<gameID_pool.length; i++){
-            let game_id = `${gameID_pool[i]}`
+        i=1;
+        type = content_type.MOVIE;
+        film_pool.map ((film) =>{
+            title = `${film}`;
+            movieSearch(film,type,i);
+            i++;
+        })
+
+
+        i=0;
+        type = content_type.SERIES;
+        serie_pool.map((serie) => {
+            title = `${serie}`;
+            serieSearch(title,type,i);
+            i++;
+        })
+
+
+        i=0;
+        gameID_pool.map((game) =>{
+            let game_id = `${game}`;
             videogameSearchById(game_id,i);
-        }
+            i++;
+        })
+        
+
 
     </script>
 </body>

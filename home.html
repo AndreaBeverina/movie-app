@@ -438,34 +438,41 @@
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
         <script type="module">
-            //FIXME: IMPORTANTE. Mettere tutte le import prima di qualsiasi altra cosa.
-    
-            //FIXME: Controllare il console.log perchè sono presenti errori sul DOM
+            
+            import { movieSearch } from "/modules/movie-search.js";
+            import { serieSearch } from "/modules/series-search.js";
+            import { carouselSearch } from "/modules/carousel-search.js";
+            import { videogameSearch } from "/modules/videogame-search.js";
+            import { content_type }from "./modules/api-utilities.js";
+            
             const ep_pool = ["I","II","III","IV","V","VI","VII","VIII","IX"];
-            const serie_pool = ["boba","obi-wan","mandalorian","the%20clone%20wars"];
-    
-             //FIXME: Essendo un unico blocco di codice mettere tutte le dichiarazioni in alto dopo le import
-            let type = "movie";
-    
-            import {movieSearch, serieSearch, carouselSearch, videogameSearch} from "/modules/dom.js";
-            
-            let title = "star%20wars"; 
+            const serie_pool = ["boba","obi-wan","mandalorian","the%20clone%20wars"];            
+            let type = content_type.MOVIE;            
+            let title = "star%20wars";
+            let i = 1;
+
             carouselSearch(title);
-    
-            //FIXME: usare array.map
-            for(let i=0; i<ep_pool.length; i++){
-                title = `star%20wars:%20episode%20${ep_pool[i]}`;
+        
+            ep_pool.map((movie_title) =>{
+                title = `star%20wars:%20episode%20${movie_title}`;
                 movieSearch(title,type,i);
-            }
-    
-            type="series"
-            for(let i=0; i<serie_pool.length; i++){
-                title = `${serie_pool[i]}`;
-                serieSearch(title,type,i);
-            }
-            
+                i++;
+            })
+         
+            type = content_type.SERIES;
+            i = 0;
+            serie_pool.map((serie) =>{
+                title = `${serie}`;
+                serieSearch(title, type, i);
+                i++;
+            })
+
             title = "star%20wars";
-            videogameSearch(title);     
+            videogameSearch(title);
+
+            ///////////////////////////////////////////
+            
+               
             
     
         </script>
