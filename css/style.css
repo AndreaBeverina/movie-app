@@ -478,3 +478,20 @@ nav{
         width: 100%;
     }
 }
+
+/* Footer */
+
+.footer{
+    text-align: center;
+    padding: 20px; 
+    background-color: rgb(0, 0, 0); 
+    color:rgb(97, 97, 97)
+}
+
+.footer a{
+    color: rgb(97, 97, 97);
+}
+
+.footer a:hover{
+    color:rgb(172, 172, 172);
+}
